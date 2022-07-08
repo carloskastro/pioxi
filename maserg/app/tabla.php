@@ -19,6 +19,23 @@
 	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
 	<script type="text/javascript" src="../assets/js/bootstrap.bundle.js"></script>
 
+	<!--Datatables Styles-->
+	<link rel="stylesheet" type="text/css" href="../assets/datatables/css/dataTables.bootstrap5.min.css">
+	<!--Datatables Responsive-->
+	<link rel="stylesheet" type="text/css" href="../assets/datatables/css/responsive.dataTables.min.css">
+
+	<!--Datatables Scripts-->
+	<script type="text/javascript" src="../assets/datatables/js/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="../assets/datatables/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../assets/datatables/js/dataTables.responsive.min.js"></script>
+	<script type="text/javascript" src="../assets/datatables/js/dataTables.bootstrap5.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+    		$('#table').DataTable();
+		});
+	</script>
+
 	<!--
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/plugins.js"></script>-->
@@ -92,33 +109,27 @@
 			</nav>
 		</header>
 		<!--Navbar-->
+		<main class="mt-5 pt-5 container">
 
-		<!--Content-->
-		<main class="mt-5 pt-5">
-
-			<div class="tab-content">
-				<div id="home" class="container tab-pane active text-center">
-					<h3>Bienvenido</h3>
-					<p>Hola usuario aquí podrás diligenciar los datos para generar los formatos correspondientes a la matrícula Sena.</p>
-					<img src="../assets/img/logoasem.png" alt="LogoAsem"  style="width:290px;">
-				</div>
-				<div id="ficha" class="container tab-pane fade">
-					<h3>Ficha de Matrícula</h3>
-					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				</div>
-				<div id="compromiso" class="container tab-pane fade">
-					<h3>Compromiso como Aprendiz Sena</h3>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-				</div>
-				<div id="tratamiento" class="container tab-pane fade">
-					<h3>Tratamiento de Datos Menor de Edad</h3>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-				</div>
-			</div>
-
+			<table class="table table-striped table-bordered table-hover" id="table" style="width:100%;">
+					<thead>
+						<tr>
+							<th>Nombre</th>
+							<th>Apellido</th>
+							<th>Correo</th>
+							<th>Documento</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Carlos</td>
+							<td>Castro</td>
+							<td>cacjx84@gmail.com</td>
+							<td>Documento</td>
+						</tr>					
+					</tbody>
+				</table>
 		</main>
-		<!--Content-->
-
 		<!--Footer-->
 		<footer class="footer mt-auto py-3 bg-dark">
 			<div class="container text-center">
