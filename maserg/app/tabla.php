@@ -32,7 +32,10 @@
 
 	<script type="text/javascript">
 		$(document).ready(function () {
-    		$('#table').DataTable();
+    		$('#table').DataTable({
+    			responsive: true,
+    			language: {url: '../assets/datatables/es-ES.json'},
+    		});
 		});
 	</script>
 
@@ -110,6 +113,7 @@
 		</header>
 		<!--Navbar-->
 		<main class="mt-5 pt-5 container">
+			<h2 class="text-center pt-3 pb-3">Listado de Aprendices</h2>
 
 			<table class="table table-striped table-bordered table-hover" id="table" style="width:100%;">
 					<thead>
@@ -121,12 +125,19 @@
 						</tr>
 					</thead>
 					<tbody>
+						<?php
+						$res=$conn->prepare('SELECT * FROM aprendiz');
+						$res->execute();
+						while ($view= $res->fetch(PDO::FETCH_ASSOC)) {
+					
+						?>
 						<tr>
-							<td>Carlos</td>
-							<td>Castro</td>
-							<td>cacjx84@gmail.com</td>
-							<td>Documento</td>
-						</tr>					
+							<td><?php echo $view['nombre']; ?></td>
+							<td><?php echo $view['apellido']; ?></td>
+							<td><?php echo $view['email']; ?></td>
+							<td><?php echo $view['documento']; ?></td>
+						</tr>
+						<?php } ?>					
 					</tbody>
 				</table>
 		</main>
