@@ -19,30 +19,84 @@
 	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
 	<script type="text/javascript" src="../assets/js/bootstrap.bundle.js"></script>
 
-	<!--Datatables Styles-->
+	<!--Datatables Styles-->	
 	<link rel="stylesheet" type="text/css" href="../assets/datatables/css/dataTables.bootstrap5.min.css">
-	<!--Datatables Responsive-->
-	<link rel="stylesheet" type="text/css" href="../assets/datatables/css/responsive.dataTables.min.css">
+	<!--botones-->
+	<link rel="stylesheet" type="text/css" href="../assets/datatables/css/buttons.bootstrap5.css">
+	
+	<!--Dejar solo si aplica responsive datatables-->
+	<link rel="stylesheet" href="../assets/datatables/css/responsive.dataTables.min.css">
+	
 
 	<!--Datatables Scripts-->
 	<script type="text/javascript" src="../assets/datatables/js/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="../assets/datatables/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript" src="../assets/datatables/js/dataTables.responsive.min.js"></script>
+
+	<!--Dejar solo si aplica responsive datatables-->
+	<script src="../assets/datatables/js/dataTables.responsive.min.js"></script>
+
+	<!--Botones Imprimir-->
+	<script type="text/javascript" src="../assets/datatables/js/dataTables.buttons.js"></script>
 	<script type="text/javascript" src="../assets/datatables/js/dataTables.bootstrap5.min.js"></script>
+	<script type="text/javascript" src="../assets/datatables/js/jszip.min.js"></script>
+	<script type="text/javascript" src="../assets/datatables/js/pdfmake.min.js"></script>
+	<script type="text/javascript" src="../assets/datatables/js/vfs_fonts.js"></script>
+	<script type="text/javascript" src="../assets/datatables/js/buttons.html5.js"></script>
+	<script type="text/javascript" src="../assets/datatables/js/buttons.print.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function () {
-    		$('#table').DataTable({
-    			responsive: true,
-    			language: {url: '../assets/datatables/es-ES.json'},
-    		});
+			$('#tableresponsive').DataTable({
+				 dom: 'Bflrtip',
+				 buttons: [
+				 {
+			        //Botón para Copy
+			        extend: 'copyHtml5',
+			        footer: true,
+			        titleAttr: 'Copiar',
+			        className: 'btn btn-primary',
+			        //Aquí es donde generas el botón personalizado
+			        text: '<i class="fa-solid fa-copy"></i>'
+			      }, 
+			      {
+			        //Botón para Excel
+			        extend: 'excelHtml5',
+			        footer: true,
+			        titleAttr: 'Exportar a Excel',
+			        className: 'btn btn-success',
+			        filename: 'Tabla',
+			        //Aquí es donde generas el botón personalizado
+			        text: '<i class="fa-sharp fa-solid fa-file-excel"></i>'
+			      }, 
+			      {
+			        //Botón para Excel
+			        extend: 'pdfHtml5',
+			        footer: true,
+			        titleAttr: 'Exportar a Pdf',
+			        filename: 'Tabla',
+			        className: 'btn btn-danger',
+			        //Aquí es donde generas el botón personalizado
+			        text: '<i class="fa-solid fa-file-pdf"></i>'
+			      }, 
+			      {
+			        //Botón para Excel
+			        extend: 'print',
+			        footer: true,
+			        titleAttr: 'Imprimir',
+			        filename: 'Tabla',
+			        className: 'btn btn-info',
+			        //Aquí es donde generas el botón personalizado
+			        text: '<i class="fa-solid fa-print"></i>'
+			      },
+			      ],
+							
+				 responsive: true,
+				 language: {
+					url: '../assets/datatables/es-ES.json',
+				},
+			});
 		});
-	</script>
-
-	<!--
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/plugins.js"></script>-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">	
+	</script>	
 </head>
 <body class="bg-light d-flex flex-column h-100">
 
@@ -115,7 +169,7 @@
 		<main class="mt-5 pt-5 container">
 			<h2 class="text-center pt-3 pb-3">Listado de Aprendices</h2>
 
-			<table class="table table-striped table-bordered table-hover" id="table" style="width:100%;">
+			<table class="table table-striped table-bordered table-hover" id="tableresponsive" style="width:100%;">
 					<thead>
 						<tr>
 							<th>Nombre</th>
