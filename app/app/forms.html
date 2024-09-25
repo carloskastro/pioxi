@@ -1,0 +1,70 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center">
+                    <img src="../assets/img/logo.png" alt="Logo" width="72" height="72">
+                    <h1 class="display-6">Registro de Usuario</h1>
+                </div>
+                <form action="" method="post" enctype="application/x-www-form-urlencoded">
+                    <div class="mb-3 mt-3">
+                        <label for="nombres" class="form-label">Nombres</label>
+                        <input class="form-control" type="text" name="nombres" id="nombres"
+                            placeholder="Escriba sus nombres" required>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="apellidos" class="form-label">Apellidos</label>
+                        <input class="form-control" type="text" name="apellidos" id="apellidos"
+                            placeholder="Escriba sus apellidos" required>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="email" class="form-label">Correo</label>
+                        <input class="form-control" type="email" name="email" id="email"
+                            placeholder="Escriba su correo" required>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input class="form-control" type="password" name="password1" id="password1"
+                            placeholder="Escriba su contraseña" required>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-block"
+                            name="regadmin">Registrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center">
+                    <i class="bi bi-person-bounding-box" style="font-size: 60px;"></i>
+                    <h1 class="display-6">Inicio de Sesión</h1>
+                </div>
+                <form action="" method="post" enctype="application/x-www-form-urlencoded">
+                    <div class="mb-3 mt-3">
+                        <label for="email" class="form-label">Correo</label>
+                        <input class="form-control" type="email" name="email" id="email"
+                            placeholder="Escriba su correo" autofocus required>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <div class="input-group">
+                            <input class="form-control" type="password" name="password" id="password"
+                                placeholder="Escriba su contraseña" required>
+                            <span class="input-group-text pt-0" onclick="pass_show_hide();">
+                                <i class="bi bi-eye-fill d-none" id="showeye" style="font-size: 20px;"></i>
+                                <i class="bi bi-eye-slash-fill" id="hideeye" style="font-size: 20px;"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success btn-block" name="inicio">Iniciar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
