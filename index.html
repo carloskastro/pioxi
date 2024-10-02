@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es-CO">
+<html lang="es-CO" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8"><!-- MAnejo de los caracteres-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Responsive-->
     <!--Favicon and title-->
     <title>Carlos</title>
-    <link rel="icon" href="assets/img/logo.png">
+    <link rel="icon" href="../assets/img/logo.png">
     <!--Tags Optimized-->
     <meta name="theme-color" content="#0d6efd">
     <meta name="MobileOptimized" content="width">
@@ -18,124 +18,48 @@
     <meta name="description" content="Diseño en Bootstrap 5">
     <meta name="keywords" content="diseño, DISEÑO, Diseño, Bootstrap, BOOTSTRAP, bootstrap">
     <!--styles Bootstrap-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+   
     <!--styles Icons Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Logo" style="width:40px;" class="rounded-pill"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavbar" aria-label="Boton navbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#intro"><i class="bi bi-info-circle"></i> Qué es</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Otra</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <button type="button" class="btn btn-primary" onclick="location.href='app/'">Acceder</button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="m-auto">
-        <section class="py-5 mb-5" id="carrousel">
-            <!-- Carousel -->
-            <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-                <!-- Indicators/dots -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-label="boton0"></button>
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="boton1"></button>
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="boton2"></button>
-                </div>
-
-                <!-- The slideshow/carousel -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="assets/img/chicago.jpg" alt="Los Angeles"
-                            class="d-block w-100">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="assets/img/chicago.jpg" alt="Chicago"
-                            class="d-block w-100"><!--Atributo alt permite cargar un texto cuando la imagen no está disponible-->
-                    </div>
-                    <div class="carousel-item">
-                        <img src="assets/img/chicago.jpg" alt="New York"
-                            class="d-block w-100">
-                    </div>
-                </div>
-
-                <!-- Left and right controls/icons -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev" aria-label="boton left">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next" aria-label="boton right">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
-        </section>
-
-        <section class="container py-5 my-5" id="intro">
-            <div class="row">
-                <div class="col-md-8">
-                    <h1 class="py-2 my-2">Qué es html5?</h1>
-                    <p>Cuando hablamos de HTML5 lo primero que tenemos que saber es que es la última versión de la tecnología HTML, cuyas siglas corresponden a “HyperText Markup Language”, que tiene el siguiente significado:
-
-                        HyperText, cuyo significado es hipertexto, que no es más que un texto que enlaza con otros contenidos, que pueden ser otro texto u otro archivo. Esto es la base del funcionamiento de la web tal y como la conocemos, que no es más que páginas y recursos interconectados.
-                        Markup, que significa marca o etiqueta, ya que todas las páginas web están construidas en base a etiquetas, desde las primeras versiones hasta las últimas etiquetas de HTML5. Un ejemplo de una etiqueta HTML es la que identifica a un párrafo, que se compone de la etiqueta, el contenido de la etiqueta y el cierre del párrafo: <p>HOLA</p>.
-                        Languaje, cuyo significado es lenguaje, porque HTML es un lenguaje, es decir, tiene sus normas, tiene su estructura y una serie de convenciones que nos sirven para definir tanto la estructura como el contenido de una web.</p>
-                </div>
-                <div class="col-md-4 text-center my-auto">
-                    <img src="assets/img/logo.png" alt="logo html5" style="width: 300px;">
-                </div>
-            </div>
-        </section>
-
-        <section class="container">
-            <p class="h4">Parte1: Landing Page</p>
-            <ul>
-                <li>Navbar</li>
-                <li>5 section</li>
-                <li>Grid</li>
-                <li>Contenido Disponible local.</li>
-                <li>Texts</li>
-                <li>Images (Local)</li>
-                <li>Audio (Local)</li>
-                <li>Video (URL o local)</li>
-                <li>Lighthouse ->100</li>
-            </ul>            
-        </section>
-
-
+    <header id="navbar"></header>
+    <!--<main class="form-center m-auto pt-5 mt-4">linea para centrar formularios-->
+    <main class="container pt-5 mt-4">
+        <div id="content"></div>
     </main>
 
     <footer>
         <p class="my-5 py-2 text-center">&copy; Copyright 2024</p>
     </footer>
 
+    <!--Script modular menu-->
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script>
+        $("#navbar").load("./navbar.html");
+           $('body').on('click', 'a', function (event) {
+               event.preventDefault();
+               var $target = $(event.currentTarget);
+               var destinationLocation = $target.attr('href');
+               if (destinationLocation !== '#') {
+                   $('#content').load(
+                       destinationLocation
+                   );
+               }
+           });
+    </script>
     <!--Scripts Bootstrap-->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <!--Script visualización password-->
+    <script src="../assets/js/password.viewer.js"></script>
     <!--¿Cómo esconder el "#" hash de una url-->
     <script type="text/javascript">
- 		window.onhashchange = function () {
-    	window.history.pushState('', document.title, window.location.pathname)
-  		}
-	</script>
+        window.onhashchange = function () {
+            window.history.pushState('', document.title, window.location.pathname)
+        }
+    </script>
 </body>
 
 </html>
