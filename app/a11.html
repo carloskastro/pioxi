@@ -1,0 +1,64 @@
+<div>
+    <h1 class="display-6">Algoritmo 11 (Bucles)</h1>
+    <p>Este script debe escribir la tabla de multiplicar del número que el usuario teclee. La tabla mostrará en
+        diferentes líneas cada producto y el resultado en la forma a x b = ab.
+    </p>
+    <div>
+        <h1 class="display-6">Solución</h1>
+        <div class="card">
+            <div class="card-body">
+                <form action="">
+                    <div class="mb-3 mt-3">
+                        <label for="entero" class="form-label">Imprima la tabla de: </label>
+                        <input type="number" class="form-control" id="num" placeholder="Digite un número entero"
+                            required>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <button type="button" class="btn btn-primary" id="calcular">Calcular</button>
+                        <div id="r"></div>
+                    </div>
+                <!--
+                Ejemplo: Usando un bucle for escribir un script que pida un valor entero y muestre en pantalla una lista
+                de números desde el 0 al valor tecleado. Los números se separarán por comas.
+                <form action="">
+                    <div class="mb-3 mt-3">
+                        <label for="entero" class="form-label">Digite un número entero</label>
+                        <input type="number" class="form-control" id="num" placeholder="Digite un número entero"
+                            required>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <button type="button" class="btn btn-primary" id="calcular">Calcular</button>
+                        <div id="r"></div>
+                    </div>-->
+                </form>
+
+                <script>
+                    /*
+                    document.getElementById("calcular").addEventListener('click', () => {
+
+                        let num = parseInt(document.getElementById("num").value)
+                        let list = "" 
+
+                        for (let count = 0; count < num; count++) {
+                            document.getElementById("r").innerHTML = list += count + ", "
+                        }
+                       
+                    });*/
+                    document.getElementById("calcular").addEventListener('click', () => {
+
+                    let msg = ''
+                    let num = parseInt(document.getElementById("num").value)
+                    let prefix = num + " X "
+
+                    for (let count = 1; count <= 10; count++) {
+                        let product = num * count;
+                        msg += prefix + count + " = " + product + "<br>";
+                    }
+                    document.getElementById("r").innerHTML = "Tabla del " + num + "<br>"+ msg
+                });
+                
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
